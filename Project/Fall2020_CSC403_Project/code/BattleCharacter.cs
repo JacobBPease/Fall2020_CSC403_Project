@@ -34,7 +34,7 @@ namespace Fall2020_CSC403_Project.code {
         strength += 2; // add magic damage and give the player extra health
         AlterHealth(2);
       }
-      if (lightnight) {
+      if (lightning) {
         strength += 2; // add lightning damage
       }
     }
