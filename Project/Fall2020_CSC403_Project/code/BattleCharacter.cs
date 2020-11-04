@@ -25,5 +25,18 @@ namespace Fall2020_CSC403_Project.code {
     public void AlterHealth(int amount) {
       Health += amount;
     }
+    
+    public void ElementalPower(bool fire, bool magic, bool lightning) {
+      if (fire) {
+        strength += 2; // add fire damage
+      }
+      if (magic) {
+        strength += 2; // add magic damage and give the player extra health
+        AlterHealth(2);
+      }
+      if (lightnight) {
+        strength += 2; // add lightning damage
+      }
+    }
   }
 }
