@@ -11,7 +11,9 @@ namespace Fall2020_CSC403_Project {
         private Enemy enemy;
         private Player player;
         private bool isBossFight = false;
-        
+
+        public static event Action OnVictory;
+
         private FrmBattle() {
             InitializeComponent();
             player = Game.player;
@@ -79,8 +81,11 @@ namespace Fall2020_CSC403_Project {
             if (player.Health <= 0) { GameOver(false); }
             else if (enemy.Health <= 0 && isBossFight == true) { GameOver(true); }
             else if (enemy.Health <= 0) {
+                OnVictory(); //broadcast to the LevelUp function
+                
                 instance = null;
                 Close();
+                
             }
         }
 
