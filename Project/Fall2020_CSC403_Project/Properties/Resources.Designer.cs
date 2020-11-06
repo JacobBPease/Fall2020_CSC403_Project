@@ -151,9 +151,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap win {
+        internal static System.Drawing.Bitmap won {
             get {
-                object obj = ResourceManager.GetObject("win", resourceCulture);
+                object obj = ResourceManager.GetObject("won", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -161,9 +161,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream win_music {
+        internal static System.IO.UnmanagedMemoryStream won_music {
             get {
-                return ResourceManager.GetStream("win_music", resourceCulture);
+                return ResourceManager.GetStream("won_music", resourceCulture);
             }
         }
     }

@@ -30,14 +30,10 @@
       this.label2 = new System.Windows.Forms.Label();
       this.lblEnemyHealthFull = new System.Windows.Forms.Label();
       this.picBossBattle = new System.Windows.Forms.PictureBox();
-      this.picLost = new System.Windows.Forms.PictureBox();
-      this.picWin = new System.Windows.Forms.PictureBox();
       this.picEnemy = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.picLost)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.picWin)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
       this.SuspendLayout();
@@ -101,28 +97,6 @@
       this.picBossBattle.TabIndex = 7;
       this.picBossBattle.TabStop = false;
       this.picBossBattle.Visible = false;
-      //
-      // picLost
-      //
-      this.picLost.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.lost;
-      this.picLost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picLost.Location = new System.Drawing.Point(780, 563);
-      this.picLost.Name = "picLost";
-      this.picLost.Size = new System.Drawing.Size(30, 28);
-      this.picLost.TabIndex = 7;
-      this.picLost.TabStop = false;
-      this.picLost.Visible = false;
-      // 
-      // picWin
-      // 
-      this.picWin.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.win;
-      this.picWin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-      this.picWin.Location = new System.Drawing.Point(780, 563);
-      this.picWin.Name = "picWin";
-      this.picWin.Size = new System.Drawing.Size(30, 28);
-      this.picWin.TabIndex = 7;
-      this.picWin.TabStop = false;
-      this.picWin.Visible = false;
       // 
       // picEnemy
       // 
@@ -161,8 +135,6 @@
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(822, 603);
       this.Controls.Add(this.picBossBattle);
-      this.Controls.Add(this.picLost);
-      this.Controls.Add(this.picWin);
       this.Controls.Add(this.lblEnemyHealthFull);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.lblPlayerHealthFull);
@@ -175,8 +147,6 @@
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
       this.Text = "Fight!";
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.picLost)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.picWin)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       this.ResumeLayout(false);
@@ -193,8 +163,6 @@
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label lblEnemyHealthFull;
     private System.Windows.Forms.PictureBox picBossBattle;
-    private System.Windows.Forms.PictureBox picLost;
-    private System.Windows.Forms.PictureBox picWin;
     private System.Windows.Forms.Timer tmrFinalBattle;
   }
 }

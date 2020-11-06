@@ -45,6 +45,8 @@
       this.picWall1 = new System.Windows.Forms.PictureBox();
       this.picWall2 = new System.Windows.Forms.PictureBox();
       this.picWall11 = new System.Windows.Forms.PictureBox();
+      this.picLost = new System.Windows.Forms.PictureBox();
+      this.picWon = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -62,6 +64,8 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLost)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picWon)).BeginInit();
       this.SuspendLayout();
       // 
       // lblInGameTime
@@ -274,6 +278,28 @@
       this.picWall11.Size = new System.Drawing.Size(164, 232);
       this.picWall11.TabIndex = 17;
       this.picWall11.TabStop = false;
+      //
+      // picLost
+      //
+      this.picLost.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.lost;
+      this.picLost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.picLost.Location = new System.Drawing.Point(780, 563);
+      this.picLost.Name = "picLost";
+      this.picLost.Size = new System.Drawing.Size(30, 28);
+      this.picLost.TabIndex = 7;
+      this.picLost.TabStop = false;
+      this.picLost.Visible = false;
+      // 
+      // picWon
+      // 
+      this.picWon.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.won;
+      this.picWon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+      this.picWon.Location = new System.Drawing.Point(780, 563);
+      this.picWon.Name = "picWon";
+      this.picWon.Size = new System.Drawing.Size(30, 28);
+      this.picWon.TabIndex = 7;
+      this.picWon.TabStop = false;
+      this.picWon.Visible = false;
       // 
       // FrmLevel
       // 
@@ -282,6 +308,8 @@
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.ClientSize = new System.Drawing.Size(1176, 726);
+      this.Controls.Add(this.picLost);
+      this.Controls.Add(this.picWon);
       this.Controls.Add(this.picWall11);
       this.Controls.Add(this.picWall2);
       this.Controls.Add(this.picWall8);
@@ -324,6 +352,8 @@
       ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picLost)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.picWon)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -351,6 +381,8 @@
     private System.Windows.Forms.PictureBox picWall1;
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
-  }
+    private System.Windows.Forms.PictureBox picLost;
+    private System.Windows.Forms.PictureBox picWon;
+    }
 }
 

@@ -10,9 +10,11 @@ namespace Fall2020_CSC403_Project {
         public static FrmBattle instance = null;
         private Enemy enemy;
         private Player player;
-        private bool isBossFight = false;
+        private bool foughtBoss = false;
 
         public static event Action OnVictory;
+        public static event OnGameOverDelegate OnGameOver;
+        public delegate void OnGameOverDelegate(bool won);
 
         private FrmBattle() {
             InitializeComponent();
@@ -25,8 +27,6 @@ namespace Fall2020_CSC403_Project {
             picEnemy.Refresh();
             BackColor = enemy.Color;
             picBossBattle.Visible = false;
-            picLost.Visible = false;
-            picWin.Visible = false;
 
             // Observer pattern
             enemy.AttackEvent += PlayerDamage;
@@ -45,7 +45,7 @@ namespace Fall2020_CSC403_Project {
             simpleSound.Play();
 
             tmrFinalBattle.Enabled = true;
-            isBossFight = true;
+            foughtBoss = true;
         }
 
         public static FrmBattle GetInstance(Enemy enemy) {
@@ -77,41 +77,23 @@ namespace Fall2020_CSC403_Project {
 
             UpdateHealthBars();
 
-            // Determine if the game is over
-            if (player.Health <= 0) { GameOver(false); }
-            else if (enemy.Health <= 0 && isBossFight == true) { GameOver(true); }
-            else if (enemy.Health <= 0) {
-                OnVictory(); //broadcast to the LevelUp function
-                
+            // If player has died
+            if (player.Health <= 0) {
+                OnGameOver(false);
                 instance = null;
                 Close();
-                
             }
-        }
+            // If player has defeated the boss
+            else if (enemy.Health <= 0 && foughtBoss) { 
+                OnGameOver(true);
+                instance = null;
+                Close();
+            }
+            else if (enemy.Health <= 0) {
+                OnVictory(); //broadcast to the LevelUp function
+                instance = null;
+                Close();
 
-        /// <summary>
-        /// Method which displays image and sound depending on whether or not the player has died
-        /// or defeated the final boss.
-        /// </summary>
-        /// <param name="won">Bool if the player has defeated the boss.</param>
-        private void GameOver(bool won) {
-            // Player has died
-            if (won == false) {
-                // Display lost image and play lost music
-                picLost.Location = Point.Empty;
-                picLost.Size = ClientSize;
-                picLost.Visible = true;
-                SoundPlayer simpleSound = new SoundPlayer(Resources.lost_music);
-                simpleSound.Play();
-            }
-            // Player has defeated boss
-            else {
-                // Display win image and play win music
-                picWin.Location = Point.Empty;
-                picWin.Size = ClientSize;
-                picWin.Visible = true;
-                SoundPlayer simpleSound = new SoundPlayer(Resources.win_music);
-                simpleSound.Play();
             }
         }
 

@@ -122,6 +122,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\won_music.wav" />
+    <None Include="data\won.png" />
     <None Include="data\lost_music.wav" />
     <None Include="data\win_music.wav" />
     <None Include="data\win.png" />

@@ -1,6 +1,8 @@
 ﻿using Fall2020_CSC403_Project.code;
+using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
@@ -44,6 +46,8 @@ namespace Fall2020_CSC403_Project {
 
       Game.player = player;
       timeBegin = DateTime.Now;
+
+      FrmBattle.OnGameOver += GameOver;
     }
 
     private Vector2 CreatePosition(PictureBox pic) {
@@ -141,6 +145,36 @@ namespace Fall2020_CSC403_Project {
 
     private void lblInGameTime_Click(object sender, EventArgs e) {
 
+    }
+
+    /// <summary>
+    /// Method which displays image and sound depending on if the player has died
+    /// or defeated the final boss.
+    /// </summary>
+    /// <param name="playerWon">Bool if the player has defeated the final boss.</param>
+    private void GameOver(bool playerWon) {
+      // Stop the player from moving and stop the game timer.
+      tmrPlayerMove.Stop();
+      tmrUpdateInGameTime.Stop();
+
+      // Player has defeated boss
+      if (playerWon) {
+        // Display won image and play won music
+        picWon.Location = Point.Empty;
+        picWon.Size = ClientSize;
+        picWon.Visible = true;
+        SoundPlayer simpleSound = new SoundPlayer(Resources.won_music);
+        simpleSound.Play();
+        }
+      // Player has died
+      else {
+        // Display lost image and play lost music
+        picLost.Location = Point.Empty;
+        picLost.Size = ClientSize;
+        picLost.Visible = true;
+        SoundPlayer simpleSound = new SoundPlayer(Resources.lost_music);
+        simpleSound.Play();
+      }
     }
   }
 }
