@@ -121,5 +121,14 @@
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\lost_music.wav" />
+    <None Include="data\win_music.wav" />
+    <None Include="data\win.png" />
+    <None Include="data\win.wav" />
+    <None Include="data\lose.wav" />
+    <None Include="data\lose_music.wav" />
+    <Content Include="data\lost.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
