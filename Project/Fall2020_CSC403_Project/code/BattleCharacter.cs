@@ -8,7 +8,7 @@ namespace Fall2020_CSC403_Project.code {
   public class BattleCharacter : Character {
     public int Health { get; private set; }
     public int MaxHealth { get; private set; }
-        public static float strength;
+        public float strength;
 
     public event Action<int> AttackEvent;
 
@@ -26,13 +26,6 @@ namespace Fall2020_CSC403_Project.code {
       Health += amount;
     }
 
-    public static void LevelUp()
-    {
-        int StrengthInmcrement = 1;
-
-        strength += StrengthInmcrement;
-
-    }
 
         public void ElementalPower(bool fire, bool magic, bool lightning) {
       if (fire) {

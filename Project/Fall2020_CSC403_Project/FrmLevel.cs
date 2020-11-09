@@ -115,6 +115,8 @@ namespace Fall2020_CSC403_Project {
       frmBattle.Show();
 
       if (enemy == bossKoolaid) {
+        enemy.strength = Game.player.strength;// adjust the boss's damage to deal damage equal to 1/2 of the player's upon initiating the encounter
+        enemy.AlterHealth(enemy.MaxHealth); //double boss's health
         frmBattle.SetupForBossBattle();
       }
     }
