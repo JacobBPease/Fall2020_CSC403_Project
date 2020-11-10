@@ -76,6 +76,11 @@ namespace Fall2020_CSC403_Project {
             }
 
             UpdateHealthBars();
+            
+            // If player health is low change player image to baby peanut
+            if (player.Health <=5) {
+                picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.babypeanut;
+            }
 
             // If player has died
             if (player.Health <= 0) {
