@@ -107,7 +107,10 @@ namespace Fall2020_CSC403_Project {
         }
 
         private void PlayerDamage(int amount) {
-            player.AlterHealth(amount);
+            player.AlterHealth(amount + 0.5*player.Armor); // add armor since amount will be negative
+            if (player.Armor > 0) {
+                player.Armor--; // decrement armor when the player is hit
+            }
         }
 
         private void tmrFinalBattle_Tick(object sender, EventArgs e) {
