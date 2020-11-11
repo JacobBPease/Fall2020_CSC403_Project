@@ -8,13 +8,15 @@ namespace Fall2020_CSC403_Project.code {
   public class BattleCharacter : Character {
     public int Health { get; private set; }
     public int MaxHealth { get; private set; }
-        public float strength;
+    public int Armor { get; private set; }
+    public float strength;
 
     public event Action<int> AttackEvent;
 
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       MaxHealth = 20;
       strength = 2;
+      Armor = 5;
       Health = MaxHealth;
     }
 
@@ -37,6 +39,7 @@ namespace Fall2020_CSC403_Project.code {
       }
       if (lightning) {
         strength += 2; // add lightning damage
+        Armor++;
       }
     }
   }
