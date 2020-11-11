@@ -8,7 +8,7 @@ namespace Fall2020_CSC403_Project.code {
   public class BattleCharacter : Character {
     public int Health { get; private set; }
     public int MaxHealth { get; private set; }
-    public int Armor { get; private set; }
+    public int Armor;
     public float strength;
 
     public event Action<int> AttackEvent;
