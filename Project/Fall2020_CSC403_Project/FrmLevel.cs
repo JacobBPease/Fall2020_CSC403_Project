@@ -17,6 +17,8 @@ namespace Fall2020_CSC403_Project {
     private DateTime timeBegin;
     private FrmBattle frmBattle;
 
+    public bool customizedPlayer = false;
+
     public FrmLevel() {
       InitializeComponent();
     }
@@ -25,7 +27,7 @@ namespace Fall2020_CSC403_Project {
       const int PADDING = 7;
       const int NUM_WALLS = 13;
 
-      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), Resources.player);
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
@@ -48,7 +50,8 @@ namespace Fall2020_CSC403_Project {
       timeBegin = DateTime.Now;
 
       FrmBattle.OnGameOver += GameOver;
-    }
+      FrmCustomize.DoneCustomizing += UpdateCharacterImage;
+        }
 
     private Vector2 CreatePosition(PictureBox pic) {
       return new Vector2(pic.Location.X, pic.Location.Y);
@@ -72,6 +75,13 @@ namespace Fall2020_CSC403_Project {
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
       // move player
       player.Move();
+
+      // check if character has been customized
+      if (!customizedPlayer) {
+        FrmCustomize frmCustomize = FrmCustomize.GetInstance();
+        frmCustomize.Show();
+        customizedPlayer = true;
+      }
 
       // check collision with walls
       if (HitAWall(player)) {
@@ -177,6 +187,14 @@ namespace Fall2020_CSC403_Project {
         SoundPlayer simpleSound = new SoundPlayer(Resources.lost_music);
         simpleSound.Play();
       }
+    }
+
+    // Method which updates the characters image after choosing one
+    // from the customization screen.
+    private void UpdateCharacterImage(Bitmap bitmap, int strength) {
+      picPlayer.BackgroundImage = bitmap;
+      Game.player.image = bitmap;
+      Game.player.strength = strength;
     }
   }
 }

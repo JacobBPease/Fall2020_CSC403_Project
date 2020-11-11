@@ -60,6 +60,12 @@
     <Compile Include="FrmBattle.Designer.cs">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCustomize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomize.designer.cs">
+      <DependentUpon>FrmCustomize.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,11 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\player_cursed.png" />
+    <None Include="data\player_mannered.png" />
+    <None Include="data\player_real.png" />
+    <None Include="data\player_young.png" />
+    <None Include="data\magic.png" />
     <None Include="data\won_music.wav" />
     <None Include="data\won.png" />
     <None Include="data\lost_music.wav" />
@@ -130,6 +141,7 @@
     <None Include="data\win.wav" />
     <None Include="data\lose.wav" />
     <None Include="data\lose_music.wav" />
+    <None Include="data\babypeanut.png" />
     <Content Include="data\lost.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

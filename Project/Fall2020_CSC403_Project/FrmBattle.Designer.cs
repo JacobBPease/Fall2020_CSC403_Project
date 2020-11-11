@@ -1,4 +1,6 @@
-﻿namespace Fall2020_CSC403_Project {
+﻿using Fall2020_CSC403_Project.code;
+
+namespace Fall2020_CSC403_Project {
   partial class FrmBattle {
     /// <summary>
     /// Required designer variable.
@@ -113,7 +115,7 @@
       // picPlayer
       // 
       this.picPlayer.BackColor = System.Drawing.Color.WhiteSmoke;
-      this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
+      this.picPlayer.BackgroundImage = Game.player.image;
       this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
       this.picPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.picPlayer.Location = new System.Drawing.Point(70, 98);
