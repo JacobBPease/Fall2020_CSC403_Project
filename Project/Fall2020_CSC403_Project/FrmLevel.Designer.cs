@@ -342,9 +342,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1764, 1117);
-            this.Controls.Add(this.picBackpack);
             this.Controls.Add(this.picLost);
             this.Controls.Add(this.picWon);
+            this.Controls.Add(this.picBackpack);
             this.Controls.Add(this.picWall11);
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall8);

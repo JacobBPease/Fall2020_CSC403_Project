@@ -20,6 +20,7 @@ namespace Fall2020_CSC403_Project {
         private FrmBattle() {
             InitializeComponent();
             player = Game.player;
+            picPlayer.BackgroundImage = player.image;
         }
 
         public void Setup() {
@@ -47,6 +48,9 @@ namespace Fall2020_CSC403_Project {
 
             tmrFinalBattle.Enabled = true;
             foughtBoss = true;
+            // Adjust width of label behind health bar for boss
+            label2.Width = (int)(226 * (enemy.Health / (float)enemy.MaxHealth));
+            UpdateHealthBars();
         }
 
         public static FrmBattle GetInstance(Enemy enemy) {
@@ -65,7 +69,7 @@ namespace Fall2020_CSC403_Project {
             const int MAX_HEALTHBAR_WIDTH = 226;
             lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
             lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
-
+            
             lblPlayerHealthFull.Text = player.Health.ToString();
             lblEnemyHealthFull.Text = enemy.Health.ToString();
         }
