@@ -127,9 +127,17 @@ namespace Fall2020_CSC403_Project {
         private void btnHeal_Click(object sender, EventArgs e)
         {
             // checks for potion in inventory and player health
-            if (player.inInventory.Contains("Potion") && player.Health <= player.MaxHealth)
+            if (player.inInventory.Contains("Potion") && player.Health < player.MaxHealth)
             {
-                player.AlterHealth(2);
+                if (player.Health == player.MaxHealth-1)
+                {
+                    player.AlterHealth(1);
+
+                }
+                else
+                {
+                    player.AlterHealth(2);
+                }
                 UpdateHealthBars();
                 player.inInventory.Remove("Potion");
             }

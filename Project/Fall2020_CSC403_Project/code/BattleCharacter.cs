@@ -16,7 +16,7 @@ namespace Fall2020_CSC403_Project.code {
         // list of possible items
         private List<string> items = new List<string>()
      {
-            "Potion","Potion",
+            "Potion","Potion", 
             "Regular Staff", "Regular Sword",
             "Fire Sword", "Lightning Sword", "Magic Staff"
      };
@@ -87,8 +87,6 @@ namespace Fall2020_CSC403_Project.code {
                 lightning = true;
             }
             ElementalPower(fire, magic, lightning);
-
-        }
 
         }
 
