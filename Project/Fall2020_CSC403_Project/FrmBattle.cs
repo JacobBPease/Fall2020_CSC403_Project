@@ -16,6 +16,7 @@ namespace Fall2020_CSC403_Project {
         public static event OnGameOverDelegate OnGameOver;
         public delegate void OnGameOverDelegate(bool won);
 
+
         private FrmBattle() {
             InitializeComponent();
             player = Game.player;
@@ -116,6 +117,18 @@ namespace Fall2020_CSC403_Project {
         private void tmrFinalBattle_Tick(object sender, EventArgs e) {
             picBossBattle.Visible = false;
             tmrFinalBattle.Enabled = false;
+        }
+
+        // heal option during battle
+        private void btnHeal_Click(object sender, EventArgs e)
+        {
+            // checks for potion in inventory and player health
+            if (player.inInventory.Contains("Potion") && player.Health <= player.MaxHealth)
+            {
+                player.AlterHealth(2);
+                UpdateHealthBars();
+                player.inInventory.Remove("Potion");
+            }
         }
     }
 }
