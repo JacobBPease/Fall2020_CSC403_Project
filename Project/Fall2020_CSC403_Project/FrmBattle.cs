@@ -94,7 +94,7 @@ namespace Fall2020_CSC403_Project {
                 Close();
             }
             // If player has defeated the boss
-            else if (enemy.Health <= 0 && foughtBoss) { 
+            else if (enemy.Health <= 0 && foughtBoss) {
                 OnGameOver(true);
                 instance = null;
                 Close();

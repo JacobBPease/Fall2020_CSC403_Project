@@ -16,7 +16,8 @@ namespace Fall2020_CSC403_Project.code {
         // list of possible items
         private List<string> items = new List<string>()
      {
-            "Potion", "Potion", "Regular Staff", "Regular Sword",
+            "Potion","Potion",
+            "Regular Staff", "Regular Sword",
             "Fire Sword", "Lightning Sword", "Magic Staff"
      };
 
@@ -46,14 +47,14 @@ namespace Fall2020_CSC403_Project.code {
 
         public void ElementalPower(bool fire, bool magic, bool lightning) {
             if (fire) {
-                strength += 2; // add fire damage
+                strength += 1; // add fire damage
             }
             if (magic) {
-                strength += 2; // add magic damage and give the player extra health
+                strength += 1; // add magic damage and give the player extra health
                 AlterHealth(2);
             }
             if (lightning) {
-                strength += 2; // add lightning damage
+                strength += 1; // add lightning damage
                 Armor++;
             }
 
@@ -67,5 +68,29 @@ namespace Fall2020_CSC403_Project.code {
             inInventory.Add(items[randomNumber]);
             items.RemoveAt(randomNumber);
         }
+
+        public void checkWeapons(List<string> inventory)
+        {
+            bool fire = false;
+            bool magic = false;
+            bool lightning = false;
+            if (inventory.Contains("Fire Sword"))
+            {
+                fire = true;
+            }
+            if (inventory.Contains("Lightning Sword"))
+            {
+                magic = true;
+            }
+            if (inventory.Contains("Magic Staff"))
+            {
+                lightning = true;
+            }
+            ElementalPower(fire, magic, lightning);
+
+        }
+
+        }
+
     } 
 }

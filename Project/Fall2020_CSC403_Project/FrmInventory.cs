@@ -53,17 +53,15 @@ namespace Fall2020_CSC403_Project
                         this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Magic_Staff;
                         this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                         break;
-
                 }
-
             // move on to next label                    
-            x++;
-            if (x == 3)
-            {
-                x = 0;
-                y++;
-            }
-        };
+                x++;
+                if (x == 3)
+                {
+                    x = 0;
+                    y++;
+                }
+            };
             
 
          

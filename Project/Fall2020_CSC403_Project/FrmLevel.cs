@@ -119,19 +119,23 @@ namespace Fall2020_CSC403_Project {
       return you.Collider.Intersects(other.Collider);
     }
 
-    private void Fight(Enemy enemy) {
-      player.ResetMoveSpeed();
-      player.MoveBack();
-      player.addItem(); // add item to inventory when entering a fight
-      frmBattle = FrmBattle.GetInstance(enemy);
-      frmBattle.Show();
+        private void Fight(Enemy enemy)
+        {
+            player.ResetMoveSpeed();
+            player.MoveBack();
+            player.checkWeapons(player.inInventory); // check current weapons in inventory to increase stats
+            frmBattle = FrmBattle.GetInstance(enemy);
+            frmBattle.Show();
 
-      if (enemy == bossKoolaid) {
-        enemy.strength = Game.player.strength;// adjust the boss's damage to deal damage equal to 1/2 of the player's upon initiating the encounter
-        enemy.AlterHealth(enemy.MaxHealth); //double boss's health
-        frmBattle.SetupForBossBattle();
-      }
-    }
+            if (enemy == bossKoolaid)
+            {
+                enemy.strength = Game.player.strength;// adjust the boss's damage to deal damage equal to 1/2 of the player's upon initiating the encounter
+                enemy.AlterHealth(enemy.MaxHealth); //double boss's health
+                frmBattle.SetupForBossBattle();
+            }
+
+            player.addItem(); // add item to inventory after a fight
+        }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
       switch (e.KeyCode) {
