@@ -23,14 +23,48 @@ namespace Fall2020_CSC403_Project
             int y = 0;
             foreach (string item in inventory)
             {
-                this.tableLayoutPanel1.GetControlFromPosition(x, y).Text = item;
-                x++;
-                if (x == 3)
+                // show item name
+                // this.tableLayoutPanel1.GetControlFromPosition(x, y).Text = item;
+
+                // add image of items in labels
+                switch (item)
                 {
-                    x = 0;
-                    y++;
+                    case ("Potion"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Potion;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+                    case ("Regular Sword"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Regular_Sword;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+                    case ("Fire Sword"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Fire_Sword;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+                    case ("Lightning Sword"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Lightning_Sword;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+                    case ("Regular Staff"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Regular_Staff;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+                    case ("Magic Staff"):
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Magic_Staff;
+                        this.tableLayoutPanel1.GetControlFromPosition(x, y).BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        break;
+
                 }
-            };
+
+            // move on to next label                    
+            x++;
+            if (x == 3)
+            {
+                x = 0;
+                y++;
+            }
+        };
+            
 
          
         }

@@ -137,6 +137,10 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\Magic Staff.png" />
+    <None Include="data\Regular Staff.png" />
+    <None Include="data\Regular Sword.jpg" />
+    <None Include="data\Potion.png" />
     <None Include="data\player_cursed.png" />
     <None Include="data\player_mannered.png" />
     <None Include="data\player_real.png" />
@@ -152,6 +156,8 @@
     <None Include="data\lose_music.wav" />
     <None Include="data\babypeanut.png" />
     <None Include="data\backpack.png" />
+    <None Include="data\Fire Sword.png" />
+    <None Include="data\Lightning Sword.png" />
     <Content Include="data\lost.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
