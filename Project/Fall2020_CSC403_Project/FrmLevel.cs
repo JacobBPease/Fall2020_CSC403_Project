@@ -16,6 +16,7 @@ namespace Fall2020_CSC403_Project {
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
+    private FrmInventory frmInventory;
 
     public bool customizedPlayer = false;
 
@@ -121,6 +122,7 @@ namespace Fall2020_CSC403_Project {
     private void Fight(Enemy enemy) {
       player.ResetMoveSpeed();
       player.MoveBack();
+      player.addItem(); // add item to inventory when entering a fight
       frmBattle = FrmBattle.GetInstance(enemy);
       frmBattle.Show();
 
@@ -196,5 +198,18 @@ namespace Fall2020_CSC403_Project {
       Game.player.image = bitmap;
       Game.player.strength = strength;
     }
-  }
+
+        private void picBackpack_Click(object sender, EventArgs e)
+        {
+            // creates Inventory form and positions it in front of level Form
+            //frmInventory.addItem();
+            frmInventory = new FrmInventory();
+            frmInventory.FormatItems(player.inInventory);
+            frmInventory.StartPosition = FormStartPosition.CenterParent;
+            frmInventory.ShowDialog();
+        }
+
+
+      
+    }
 }
