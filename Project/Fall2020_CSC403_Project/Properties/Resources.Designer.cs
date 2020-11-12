@@ -132,6 +132,26 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fire_Sword {
+            get {
+                object obj = ResourceManager.GetObject("Fire_Sword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lightning_Sword {
+            get {
+                object obj = ResourceManager.GetObject("Lightning_Sword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lost {
             get {
                 object obj = ResourceManager.GetObject("lost", resourceCulture);
@@ -145,6 +165,16 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.IO.UnmanagedMemoryStream lost_music {
             get {
                 return ResourceManager.GetStream("lost_music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magic_Staff {
+            get {
+                object obj = ResourceManager.GetObject("Magic_Staff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -194,6 +224,36 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap player_young {
             get {
                 object obj = ResourceManager.GetObject("player_young", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Potion {
+            get {
+                object obj = ResourceManager.GetObject("Potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Regular_Staff {
+            get {
+                object obj = ResourceManager.GetObject("Regular_Staff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Regular_Sword {
+            get {
+                object obj = ResourceManager.GetObject("Regular_Sword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

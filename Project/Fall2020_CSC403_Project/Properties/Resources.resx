@@ -169,4 +169,22 @@
   <data name="backpack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\backpack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fire_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Fire Sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lightning_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Lightning Sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magic_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Magic Staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Potion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Regular_Staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Regular Staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Regular_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\Regular Sword.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
