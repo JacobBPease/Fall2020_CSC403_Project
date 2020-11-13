@@ -158,6 +158,9 @@
     <None Include="data\backpack.png" />
     <None Include="data\Fire Sword.png" />
     <None Include="data\Lightning Sword.png" />
+    <None Include="data\Arrow.png" />
+    <None Include="data\Exit.png" />
+    <None Include="data\Elf.jpg" />
     <Content Include="data\lost.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

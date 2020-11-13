@@ -33,7 +33,8 @@ namespace Fall2020_CSC403_Project {
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
 
-      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+
+            bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
@@ -91,10 +92,15 @@ namespace Fall2020_CSC403_Project {
 
       // check collision with enemies
       if (HitAChar(player, enemyPoisonPacket)) {
-        Fight(enemyPoisonPacket);
+                if (enemyPoisonPacket.Health == enemyPoisonPacket.MaxHealth) {
+                    Fight(enemyPoisonPacket); 
+                }
       }
       else if (HitAChar(player, enemyCheeto)) {
-        Fight(enemyCheeto);
+                if (enemyCheeto.Health == enemyCheeto.MaxHealth)
+                {
+                    Fight(enemyCheeto);
+                }
       }
       if (HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);
